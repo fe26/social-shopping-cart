@@ -66,7 +66,7 @@
 											</label>
 
 											<div class="clear"></div>
-											<div class="btns">
+											<div class="btns">  
 											<a href="#" class="button-2" data-type="submit">Submit</a></div>
 										</fieldset>
 									</form>
