@@ -62,7 +62,7 @@
 						<li><a href="index-3.html">Services</a></li>
 						<li><a href="index-4.html">FAQs</a></li>
 						<li><a href="index-5.html">Contact us</a></li>
-						<li><a href="<?php echo $this->session->userdata('logout') ?>">Logout</a></li>
+						<li><a href="<?php echo $_SESSION['logout'] ?>">Logout</a></li>
 					</ul>
 					
 					<div class="clear"></div>	
