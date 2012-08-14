@@ -22,12 +22,9 @@ class Welcome extends CI_Controller {
 		}else{
 			$this->session->unset_userdata('fb_data');
 		}
-		
 		$this->session->set_userdata('login', $this->fb_ignited->fb_login_url(false,'email,user_photos,user_about_me,user_location',base_url()));
 		$this->session->set_userdata('logout', $this->fb_ignited->fb_logout_url());
-		
-		
-		$sess=$this->session->userdata('fb_data');
+		$sess=$this->session->userdata('fb_data'); 
 		if(!empty($sess)){
 			redirect('user');
 		}else{
