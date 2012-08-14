@@ -32,7 +32,8 @@
 							_.labels.each(function(){
 								var label=$(this),
 									inp=$(_.targets,this),
-									defVal=inp.val(),
+									//defVal=inp.val(),
+									defVal='',
 									trueVal=(function(){
 												var tmp=inp.is('input')?(tmp=label.html().match(/value=['"](.+?)['"].+/),!!tmp&&!!tmp[1]&&tmp[1]):inp.html()
 												return defVal==''?defVal:tmp

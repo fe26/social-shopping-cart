@@ -12,7 +12,8 @@ class User extends CI_Controller{
 	}
 	function registrasi(){
 		$this->template->write('title2','REGISTRASI');
-		$this->template->write_view('content','registrasi_view','');
+		$data=$_SESSION['fb_data']['profile'];
+		$this->template->write_view('content','registrasi_view',$data);
 		$this->template->render();
 	}
 }

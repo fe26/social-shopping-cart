@@ -192,7 +192,7 @@ class Fb_ignited {
 		$user = $this->CI->facebook->getUser();
 		if ($user) {
 			try {
-				$me = $this->CI->facebook->api('/me?fields=id,name,email,gender,bio');
+				$me = $this->CI->facebook->api('/me?fields=id,name,email,gender');
 			} catch (FacebookApiException $e) {
 				if ($redirect == true) {
 					if ($script == true): echo $this->fb_login_url(true);

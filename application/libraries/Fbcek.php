@@ -23,7 +23,7 @@ class Fbcek{
 			unset($_SESSION['fb_data']);
 		}
 	}
-	$_SESSION['login']= $this->CI->fb_ignited->fb_login_url(false,'email,user_photos,user_about_me,user_location',base_url());
+	$_SESSION['login']= $this->CI->fb_ignited->fb_login_url(false,'email,user_photos',base_url());
 	$_SESSION['logout']= $this->CI->fb_ignited->fb_logout_url();
   }
 }
