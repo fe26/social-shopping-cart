@@ -1,5 +1,8 @@
 <?php
-	 $session=$this->session->userdata('fb_data');
+	 if(isset($_SESSION['fb_data'])){
+		$session=$_SESSION['fb_data'];
+	}
+
 	 // echo "<pre>";
 	 // print_r($session);
 	 // echo "<pre>";
@@ -98,9 +101,9 @@
 									<!--div class="fb-login-button" data-show-faces="true" data-width="300" data-max-rows="1"></div-->
 									<?php
 									if($session['profile']['id']){
-										echo '<a href="'.$this->session->userdata('logout').'">Logout</a>';  
+										echo '<a href="'.$_SESSION['logout'].'">Logout</a>';  
 									}else{
-										echo '<a href="'.$this->session->userdata('login').'"><img src=" '.base_url().'assets/images/connect-with-facebook.png" /></a>';
+										echo '<a href="'.$_SESSION['login'].'"><img src=" '.base_url().'assets/images/connect-with-facebook.png" /></a>';
 										//echo '<a href="javascript:void(0)" onclick="loginFB()"><img src=" '.base_url().'images/connect-with-facebook.png" /></a>';
 										//echo $session['loginUrl'];
 									}

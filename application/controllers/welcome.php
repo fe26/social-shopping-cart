@@ -10,23 +10,7 @@ class Welcome extends CI_Controller {
 	}
 
 	function index(){
-		// if($this->fb_me){
-			// $profile=$this->fb_me;
-			// $picture=$this->fb_ignited->fb_fql("SELECT pic_square,pic_big FROM user WHERE uid =".$profile['id'], false);
-			// $picture=$picture['data']['0'];
-			// $fb_data = array(
-                    // 'profile' => $profile,
-					// 'picture'=>$picture
-          // //          'fb_app' => $this->fb_app
-                // );
-			// $this->session->set_userdata('fb_data', $fb_data);
-		// }else{
-			// $this->session->unset_userdata('fb_data');
-		// }
-		// $this->session->set_userdata('login', $this->fb_ignited->fb_login_url(false,'email,user_photos,user_about_me,user_location',base_url()));
-		// $this->session->set_userdata('logout', $this->fb_ignited->fb_logout_url());
-		$sess=$this->session->userdata('fb_data'); 
-		if(!empty($sess)){
+		if(isset($_SESSION['fb_data'])){
 			redirect('user');
 		}else{
 			$this->template->render();

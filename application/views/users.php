@@ -1,9 +1,11 @@
 <?php
-	 $session=$this->session->userdata('fb_data');
+	 if(isset($_SESSION['fb_data'])){
+		$session=$_SESSION['fb_data'];
+	}
+
 	 // echo "<pre>";
 	 // print_r($session);
 	 // echo "<pre>";
-	 
 ?>
 <!DOCTYPE html>
 <html lang="en">
