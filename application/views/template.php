@@ -100,7 +100,7 @@
                                     <div class="title-2">GRATIS</div>
 									<!--div class="fb-login-button" data-show-faces="true" data-width="300" data-max-rows="1"></div-->
 									<?php
-									if($session['profile']['id']){
+									if(isset($session['profile']['id'])){
 										echo '<a href="'.$_SESSION['logout'].'">Logout</a>';  
 									}else{
 										echo '<a href="'.$_SESSION['login'].'"><img src=" '.base_url().'assets/images/connect-with-facebook.png" /></a>';
