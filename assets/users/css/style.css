@@ -251,7 +251,6 @@ img {
 .block-5 {
 	padding:20px 20px 25px 20px;
 	border: 1px dashed #d6d6d6;
-	text-align:center;
 	color:#8b8a8a;
 	font:11px/16px Arial, sans-serif;
 }
@@ -497,44 +496,45 @@ iframe {
 	display: block;
 	position: relative;
 	min-height: 41px;
-	width: 166px;
+	width: 100%;
 }
-#confirm  label.message {
-	min-height: 248px;
+#confirm  label.message,#confirm  label.deskripsi {
+	min-height: 125px;
 }
 #confirm input {
-	display: block;
-	margin: 0;
-	outline: none;
-	width: 166px;
-	height: 30px;
-	border: 1px solid #dddddd;
-	color: #727272;
-	font: 13px/20px Arial, sans-serif;
-	background: #ffffff;
-	padding: 0 12px;
-	-webkit-border-radius: 16px;
-	-moz-border-radius: 16px;
-	border-radius: 16px;
-	box-shadow: none !important;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: medium none;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
+    color: #999A99;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    height: 16px;
+    margin: 0;
+    outline: medium none;
+    overflow: hidden;
+    padding: 7px 10px;
+    vertical-align: middle;
+	width:65%;
 }
 #confirm textarea {
-	display: block;
-	margin: 0;
-	padding: 5px 12px;
-	outline: none;
-	font: 13px/20px Arial, sans-serif;
-	background: #ffffff;
-	color: #727272;
-	border: 1px solid #dddddd;
-	width: 254px;
-	height: 218px;
-	resize: none;
-	overflow: auto;
-	-webkit-border-radius: 16px;
-	-moz-border-radius: 16px;
-	border-radius: 16px;
-	box-shadow: none !important;
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: medium none;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
+    color: #999A99;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    height: 100px;
+    margin: 0;
+    outline: medium none;
+    overflow: auto;
+    padding: 7px 10px;
+    resize: none;
+    vertical-align: middle;
+	width:65%;
 }
 #confirm label > span {
 	color: #f3301e;

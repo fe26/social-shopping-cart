@@ -11,6 +11,7 @@ class User extends CI_Controller{
 		$this->template->render();
 	}
 	function registrasi(){
+		$this->template->write('title2','REGISTRASI');
 		$this->template->write_view('content','registrasi_view','');
 		$this->template->render();
 	}

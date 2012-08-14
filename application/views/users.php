@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="<?php echo base_url()?>assets/users/css/style.css">
 <script src="<?php echo base_url()?>assets/users/js/jquery-1.7.1.min.js"></script>
 <script src="<?php echo base_url()?>assets/users/js/superfish.js"></script>
+<script src="<?php echo base_url()?>assets/users/js/forms.js"></script>
 <script src="<?php echo base_url()?>assets/users/js/script.js"></script>
 
 
