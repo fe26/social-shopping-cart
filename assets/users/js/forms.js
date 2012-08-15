@@ -13,7 +13,8 @@
 						notRequiredCl:'notRequired',
 						successCl:'success',
 						successShow:'4000',
-						mailHandlerURL:'bat/MailHandler.php',
+						mailHandlerURL:'',
+						redirectUrl:'',
 						ownerEmail:'#',
 						stripHTML:true,
 						smtpMailServer:'localhost',
@@ -100,23 +101,32 @@
 							return label.length?val==defVal?'nope':val:'nope'
 						}
 						,submitFu:function(){
-							_.validateFu(_.labels)							
+							_.validateFu(_.labels)
 							if(!_.form.has('.'+_.invalidCl).length)
 								$.ajax({
 									type: "POST",
 									url:_.mailHandlerURL,
-									data:{
-										name:_.getValFromLabel($('.name',_.form)),
-										email:_.getValFromLabel($('.email',_.form)),
-										phone:_.getValFromLabel($('.phone',_.form)),
-										fax:_.getValFromLabel($('.fax',_.form)),
-										state:_.getValFromLabel($('.state',_.form)),
-										message:_.getValFromLabel($('.message',_.form)),
-										owner_email:_.ownerEmail,
-										stripHTML:_.stripHTML
-									},
-									success: function(){
-										_.showFu()
+									// data:{
+										// name:_.getValFromLabel($('.name',_.form)),
+										// email:_.getValFromLabel($('.email',_.form)),
+										// phone:_.getValFromLabel($('.phone',_.form)),
+										// fax:_.getValFromLabel($('.fax',_.form)),
+										// state:_.getValFromLabel($('.state',_.form)),
+										// message:_.getValFromLabel($('.message',_.form)),
+										// owner_email:_.ownerEmail,
+										// stripHTML:_.stripHTML
+										
+									// }
+									data:_.form.serialize()
+									,
+									success: function(result){
+										//_.showFu();
+										if(result=='failed'){
+											alert('Maaf ada kesalahan silahkan submit ulang');
+										}else{
+											_.showFu();
+										}
+										
 									}
 								})			
 						},
@@ -125,7 +135,7 @@
 								setTimeout(function(){
 									_.success.slideUp()
 									_.form.trigger('reset')
-								},_.successShow)
+								},_.successShow,window.open(_.redirectUrl,'_parent'))
 							})
 						},
 						controlsFu:function(){

@@ -6,7 +6,8 @@
 html {overflow-y:scroll;}
 body {
 	background: #fff url('../images/body-bg.jpg') no-repeat 50% 0;
-	font:13px/20px Arial, sans-serif;
+	/*font:13px/20px Arial, sans-serif;*/
+	font:10px/10px Arial, sans-serif;
 	color:#727272;
 	position:relative;
 	min-width:980px;
@@ -563,9 +564,11 @@ display:block;
 	margin-right: 20px;
 }
 .profile-name{
+	font:14px/17px Arial,sans-serif;
 font-weight: bold;
     line-height: 30px;
 	padding-left:10px;
+
 }
 
 /* ---------->>> jtip <<<---------------------------------------------------------------*/

@@ -76,6 +76,5 @@ $(function(){
 	
 })
 $(function(){
-	//$('#pro_contact-form').forms({ownerEmail:'#'});
-	$('#form1').forms({ownerEmail:'#',mailHandlerURL:'tes.php'});
+	$('#formregistrasi').forms({ownerEmail:'#',mailHandlerURL:'postRegistrasi',redirectUrl:'user'});
 })

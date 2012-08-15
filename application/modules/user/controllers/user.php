@@ -16,6 +16,29 @@ class User extends CI_Controller{
 		$this->template->write_view('content','registrasi_view',$data);
 		$this->template->render();
 	}
+	function postRegistrasi(){
+	  $dedit=date('Y-m-d H:i:s');
+	  if(!isset($_SERVER["HTTP_X_REQUESTED_WITH"])){
+		 redirect("error");
+		 exit;
+	  }
+	  $data = array(		
+		'id' => $_SESSION['fb_data']['profile']['id'],
+		'name' => $this->input->post( "name", TRUE ),
+		'email' => $this->input->post( "email", TRUE ),
+		'phone' => $this->input->post( "phone", TRUE ),
+		'address' => $this->input->post( "address", TRUE ),
+		'city' => $this->input->post( "city", TRUE ),
+		'description' => $this->input->post( "description", TRUE ),
+		'date_join' => $dedit
+		);
+	  $this->load->model('User_m');
+	  if($this->User_m->insertProfile($data)){
+		echo 'sukses';
+	  }else{
+		echo 'failed';
+	  }
+	}
 }
 
 /* End of file welcome.php */
