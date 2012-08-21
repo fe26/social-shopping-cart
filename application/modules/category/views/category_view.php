@@ -23,7 +23,7 @@
 									<h2 class="h2-color-1 ident-bot-2 title-1">'.word_limiter(strip_tags($row['category_name'],''),2 ).'</h2>
 									<p id=p'.$i.' class="teaser-1">'.word_limiter(strip_tags($row['description'],''),10 ).'</p>
 									<br />
-									<a href="'.base_url().'user/category/edit/'.$row['category_id'].'" class="buttonTool b-color-1">Edit</a>
+									<a href="'.base_url().'user/category/edit/'.$row['category_id'].'" class="buttonTool b-color-1 edit">Edit</a>
 									<a href="'.base_url().'user/category/delete/'.$row['category_id'].'" class="buttonTool b-color-1">Hapus</a>
 								</div>
 							</div>';
@@ -40,12 +40,12 @@
 		</div>
 	</div>
 </div>
-<div id="FormKategory" style="display:none;" title="TAMBAH KATEGORI PRODUK">
+<div id="FormKategory" style="display:none;" title="FORM KATEGORI PRODUK">
 </div>
 <script type="text/javascript">
 $(document).ready(function() {
 //alert($('.title-1').height());
-    $('#add').click(function(){
+    $('#add,.edit').click(function(){
 		$.ajax({
 		  url: $(this).attr('href'),
 		  success: function(data) {

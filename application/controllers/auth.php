@@ -22,6 +22,7 @@ class Auth extends CI_Controller {
 			}
 		}
     }
+	
 	function logout(){
 		session_destroy();
 		$this->session->sess_destroy();

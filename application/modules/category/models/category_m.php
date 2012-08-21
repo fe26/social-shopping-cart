@@ -11,6 +11,15 @@ class Category_m extends CI_Model{
 			return false;
 		}
 	}
+	function updatedata($data,$id){
+		$this->db->where('category_id',$id);
+		$this->db->where('uid',$_SESSION['fb_data']['profile']['id']);
+		if($this->db->update('category',$data)){
+			return true;
+		}else{
+			return false;
+		}
+	}	
 	function getAllData($perPage,$uri){
 		$this->db->select('category_id,category_name,description');
 		$this->db->where('uid',$_SESSION['fb_data']['profile']['id']);
@@ -21,5 +30,11 @@ class Category_m extends CI_Model{
 	function getRow(){
 		$this->db->where('uid',$_SESSION['fb_data']['profile']['id']);
 		return $this->db->count_all_results('category');
+	}
+	function getData($id){
+		$this->db->where('uid',$_SESSION['fb_data']['profile']['id']);
+		$this->db->where('category_id',$id);
+		$result=$this->db->get('category');
+		return $result;
 	}
 }

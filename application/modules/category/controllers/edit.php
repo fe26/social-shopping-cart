@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class Add extends CI_Controller{
+class Edit extends CI_Controller{
   function __Construct(){
     parent::__Construct();
 	if(!isset($_SERVER["HTTP_X_REQUESTED_WITH"])){
@@ -7,18 +7,25 @@ class Add extends CI_Controller{
 		exit;
 	 }
   }
-	function index(){
-		$data['post']=base_url().'user/category/add/post';
-		$this->load->view('categoryadd_view',$data);
-	}
+	function index($id=''){
+		$this->load->model('Category_m');
+		$result=$this->Category_m->getData($id);
+		if($result->num_rows()>0){
+			$data=$result->row_array();
+			$data['post']=base_url().'user/category/edit/post';
+			$this->load->view('categoryadd_view',$data);
+		}else{
+			echo '<div class="block-1">Tidak ada data</center></div>';
+		}
+
+	 }	
 	function post(){
-	  $data = array(		
-		'uid' => $_SESSION['fb_data']['profile']['id'],
+	  $data = array(
 		'category_name' => $this->input->post( "category_name", TRUE ),
 		'description' => $this->input->post( "description", TRUE )
 		);
 	  $this->load->model('Category_m');
-	  if($this->Category_m->insertdata($data)){
+	  if($this->Category_m->updatedata($data,$this->input->post( "category_id", TRUE ))){
 		echo 'sukses';
 		$_SESSION['notif']=array(
 			'msg' => 'Data berhasil disimpan',
