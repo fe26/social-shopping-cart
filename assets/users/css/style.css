@@ -5,9 +5,8 @@
 
 html {overflow-y:scroll;}
 body {
-	background: #fff url('../images/body-bg.jpg') no-repeat 50% 0;
-	/*font:13px/20px Arial, sans-serif;*/
-	font:10px/10px Arial, sans-serif;
+	/*background: #fff url('../images/body-bg.jpg') no-repeat 50% 0;*/
+	font:13px/20px Arial, sans-serif;
 	color:#727272;
 	position:relative;
 	min-width:980px;
@@ -94,6 +93,12 @@ strong {
 	margin-bottom: 22px;
 }
 .ident-bot-4 {margin-bottom:40px;}
+.wrapper2{
+	overflow: hidden;
+    padding-top: 10px;
+    position: relative;
+    width: 100%;
+}
 .ident-bot-5 {margin-bottom:11px;}
 .ident-bot-6 {margin-bottom:12px;}
 .ident-bot-7 {margin-bottom:9px;}
@@ -149,7 +154,7 @@ header h1.desktop a,header h1.mobile a {
 	background: url('../images/logo.png') no-repeat;
 }
 header h1.desktop {
-	margin:42px 0 25px 24px;
+	margin:0px 0px 25px 0px;
 }
 	#page2 h1.desktop {
 		margin:42px 0 38px 24px;
@@ -161,8 +166,8 @@ header h1.mobile {
 	display:none;
 }
 .slogan-ident {
-	margin-left:31px;
-	margin-bottom:26px;
+padding-left:5px;
+
 }
 .slogan {
 	color:#0095D6;
@@ -198,6 +203,7 @@ img {
 	text-align:center;
 	color:#8b8a8a;
 	font:11px/16px Arial, sans-serif;
+	margin-bottom:10px;
 }
 .block-1:hover > h2.h2-color-1 {
 	color:#f3c84b;
@@ -233,6 +239,7 @@ img {
 	#page3 .block-2 {padding-right: 20px;}
 .block-3 {
 	padding-right: 20px;
+	margin-top:14px;
 }
 .block-4 {
 	background: url('../images/block-4-bg.jpg');
@@ -564,7 +571,7 @@ display:block;
 	margin-right: 20px;
 }
 .profile-name{
-	font:14px/17px Arial,sans-serif;
+	font-size:12px;
 font-weight: bold;
     line-height: 30px;
 	padding-left:10px;
@@ -617,7 +624,7 @@ p, label{font-size: 1.2em;}
 
 #JT {
 	position: absolute;
-	z-index:100;
+	z-index:1005;
 	border: 2px solid #CCCCCC;
 	background-color: #fff;
 	font-size:10px;
@@ -665,4 +672,69 @@ margin:3px 0;
 
 .jTip{
 cursor:help;
+}
+.link{
+	background:url('../images/icon/add.png') no-repeat 0 50%;
+	font-weight:bold;
+	padding:8px 5px 8px 5px;
+	width:200px;
+	display:block;
+	color:#464654;
+	float:right;
+}
+.link:hover{
+color:#5D8EE0;
+}
+.buttonTool {
+    background: none repeat scroll 0 0 #F1F1F1;
+    border-radius: 16px 16px 16px 16px;
+    color: #1E1E1E;
+    display: inline;
+    font: 12px/33px Arial,sans-serif;
+    padding:10px 15px  10px 15px;
+	
+}
+.buttonTool:hover{
+color:#FFF;
+}
+/* Pagging */
+.bx-pager {
+    color: #333333;
+    float: left;
+    height: 20px;
+    margin: 10px 0;
+}
+.bx-pager a {
+    color: #1792FD;
+    font-weight: bold;
+    height: 20px;
+    padding: 3px 10px;
+    text-decoration: none;
+    width: 20px;
+}
+.bx-pager a:hover {
+    background: none repeat scroll 0 0 #DC008B;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.bx-pager strong {
+   background: none repeat scroll 0 0 #DC008B;
+    color: #FFFFFF;
+	font-weight: bold;
+    height: 20px;
+    padding: 3px 10px ;
+    text-decoration: none;
+    width: 20px;
+}
+.bx-pager a.active{
+    background: none repeat scroll 0 0 #DC008B;
+    color: #FFFFFF;
+}
+.teaser-1{
+	height:48px;
+	overflow:hidden;
+}
+.title-1{
+	height:26px;
+	overflow:hidden;
 }

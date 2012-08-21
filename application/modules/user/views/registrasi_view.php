@@ -8,8 +8,9 @@
 			<div class="block-4 ident-left-1 ident-bot-8">
 					<div class="block-4-border">
 						<div>
-							<div class="slogan"><span>FORM REGISTRASI</span></div>
-							
+							<div class="slogan-ident">
+								<div class="slogan-1">FORM REGISTRASI</div>
+							</div>
 							<div class="block-5">
 								<div id="confirm">
 									<form id="formregistrasi">
@@ -18,7 +19,7 @@
 											<label class="name">
 												<span class="caption">Nama Toko : </span>
 												<input type="text"  value="<?php if(isset($name)) echo 'Toko '.$name ?>" name="name">
-												<span class="formInfo"><a rev="Nama Toko digunakan untuk identitas toko online anda" class="jTip" id="1" name="Field E-mail"> &nbsp;</a></span>
+												<span class="formInfo"><a rev="Nama Toko digunakan untuk identitas toko online anda" class="jTip" id="1" name="Field Nama Toko"> &nbsp;</a></span>
 												<span class="error">*This is not a valid name.</span> <span class="empty">*This field is required.</span>
 											</label>
 											<label class="email">
@@ -35,14 +36,13 @@
 												</span>
 												<span class="error">*This is not a valid phone number.</span> <span class="empty">*This field is required.</span>
 											</label>
-											<label class="message">
+											<label class="deskripsi">
 											<span class="caption">Alamat : </span>
 												<textarea name="address"></textarea>
 												<span class="formInfo">
 													<a rev="Cantumkan Alamat anda dengan lengkap" class="jTip" id="4" name="Field Alamat"> &nbsp;</a>
 												</span>
-												
-												<span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span>
+												 <span class="empty">*This field is required.</span>
 											</label>
 											<label class="city">
 											<span class="caption">Kota : </span>
@@ -58,7 +58,7 @@
 												<span class="formInfo">
 													<a rev="Selain untuk indentitas Deskripsi Toko anda akan memudahkan pencarian pembeli" class="jTip" id="6" name="Field Deskripsi Toko Anda"> &nbsp;</a>
 												</span>
-												<span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span>
+												<span class="empty">*This field is required.</span>
 											</label>
 
 											<div class="clear"></div>
@@ -73,3 +73,8 @@
 					</div>
 				</div>		
 		</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#formregistrasi').forms({ownerEmail:'#',mailHandlerURL:'postRegistrasi',redirectUrl:'<?php echo base_url()?>user/home'});
+}); 	
+</script>	

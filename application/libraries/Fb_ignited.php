@@ -266,6 +266,7 @@ class Fb_ignited {
 		}
 		$url = $this->CI->facebook->getLoginUrl(array(
 			'scope' => $scope,
+			'display'=>'popup',
 			'redirect_uri' => $redirect
 				));
 		if ($script == true) {
@@ -288,7 +289,7 @@ class Fb_ignited {
 				// ));
 		
 		$url = $this->CI->facebook->getLogoutUrl(array(
-			'next' => 'http://demo.sarana-p3gl.com/welcome/logout/'
+			'next' => 'http://demo.sarana-p3gl.com/auth/logout'
 				));
 		return $url;
 	}

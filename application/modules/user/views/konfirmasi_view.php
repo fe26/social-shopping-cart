@@ -11,7 +11,9 @@
 			<div class="block-4 ident-left-1 ident-bot-8">
 					<div class="block-4-border">
 						<div>
-							<div class="slogan"><span>Anda Login Sebagai...</span></div>
+						<div class="slogan-ident">
+							<div class="slogan-1">Anda Login Sebagai...</div>
+						</div>
 							
 							<div class="block-1">
 								<img class="ident-bot-1" src="<?php if(isset($session['picture']['pic_big'])) echo $session['picture']['pic_big'] ?>" alt="">

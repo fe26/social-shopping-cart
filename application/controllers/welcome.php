@@ -18,11 +18,7 @@ class Welcome extends CI_Controller {
     }
 	
 	
-	function logout(){
-		session_destroy();
-		$this->session->sess_destroy();
-		redirect();
-	}
+
 }
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */

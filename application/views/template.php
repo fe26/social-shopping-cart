@@ -2,11 +2,6 @@
 	 if(isset($_SESSION['fb_data'])){
 		$session=$_SESSION['fb_data'];
 	}
-
-	 // echo "<pre>";
-	 // print_r($session);
-	 // echo "<pre>";
-	 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +26,7 @@
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/ie.css"> 
 <![endif]-->
 <!--script src="http://connect.facebook.net/en_US/all.js"></script-->
-<script>
+<script type="text/javascript">
   // window.fbAsyncInit = function() {
     // FB.init({
       // appId      : '383489811716543', // App ID
@@ -103,9 +98,9 @@
 									if(isset($session['profile']['id'])){
 										echo '<a href="'.$_SESSION['logout'].'">Logout</a>';  
 									}else{
-										echo '<a href="'.$_SESSION['login'].'"><img src=" '.base_url().'assets/images/connect-with-facebook.png" /></a>';
+										//echo '<a href="" id="fbLogin"><img src=" '.base_url().'assets/images/connect-with-facebook.png" /></a>';
 										//echo '<a href="javascript:void(0)" onclick="loginFB()"><img src=" '.base_url().'images/connect-with-facebook.png" /></a>';
-										//echo $session['loginUrl'];
+										echo $_SESSION['login'];
 									}
 									?>									
                                 </div>

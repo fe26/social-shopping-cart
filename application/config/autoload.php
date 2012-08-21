@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 $autoload['packages'] = array();
 $autoload['libraries'] = array('session','fb_ignited','fbcek','template');
-$autoload['helper'] = array('url');
+$autoload['helper'] = array('url','text');
 $autoload['config'] = array();
 $autoload['language'] = array();
 $autoload['model'] = array();

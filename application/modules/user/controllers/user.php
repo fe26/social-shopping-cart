@@ -5,13 +5,12 @@ class User extends CI_Controller{
 	$this->template->set_template('user');
   }
 	function index(){
-		$this->template->write('title1','Selamat Datang di NUMPANGJUALAN.COM');
-		$this->template->write('title2','Konfirmasikan Profil Anda');
+		$this->template->write('title1','KONFIRMASI PROFIL ANDA');
 		$this->template->write_view('content','konfirmasi_view','');
 		$this->template->render();
 	}
 	function registrasi(){
-		$this->template->write('title2','REGISTRASI');
+		$this->template->write('title1','REGISTRASI');
 		$data=$_SESSION['fb_data']['profile'];
 		$this->template->write_view('content','registrasi_view',$data);
 		$this->template->render();
@@ -35,8 +34,20 @@ class User extends CI_Controller{
 	  $this->load->model('User_m');
 	  if($this->User_m->insertProfile($data)){
 		echo 'sukses';
+		$_SESSION['notif']=array(
+			'msg' => 'Selamat Registrasi Berhasil',
+			'type' => 'success',
+			'modal' => 'true',
+			'layout'=>'center'
+		);
 	  }else{
 		echo 'failed';
+		$_SESSION['notif']=array(
+			'msg' => 'Registrasi Gagal Silahkan mencoba kembali',
+			'type' => 'error',
+			'modal' => 'false',
+			'layout'=>'bottomRight'
+		);
 	  }
 	}
 }
