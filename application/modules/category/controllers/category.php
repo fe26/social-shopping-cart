@@ -17,9 +17,28 @@ class Category extends CI_Controller{
 		$this->template->write('title1','KATEGORI PRODUK');
 		$this->template->write_view('content','category_view',$data);
 		$this->template->render();
+		
 	}
 	
-
+	function delete($id=""){
+	  $this->load->model('Category_m');
+	  if($this->Category_m->deletedata($id)){
+		$_SESSION['notif']=array(
+			'msg' => 'Data berhasil dihapus',
+			'type' => 'success',
+			'modal' => 'false',
+			'layout'=>'bottomRight'
+		);
+	  }else{
+		$_SESSION['notif']=array(
+			'msg' => 'Ada kesalahan data gagal dihapus',
+			'type' => 'error',
+			'modal' => 'false',
+			'layout'=>'bottomRight'
+		);
+	  }
+	  redirect('user/category');
+	}
 }
 
 /* End of file welcome.php */

@@ -79,7 +79,6 @@ $(function(){
  //alert,information,error,warning,notification,success
   layout = layout || 'bottomRight';
  modal = modal || false;
-
   	var n = noty({
   		text: text,
   		type:  type,
@@ -89,7 +88,26 @@ $(function(){
   		theme: 'default'
   	});
   }
-		
-			
-		
-
+  
+function confirm(obj){
+    var n = noty({
+      text: "Anda akan melanjutkan??",
+      type: 'alert',
+      dismissQueue: true,
+      layout: 'center',
+	  modal:true,
+      theme: 'default',
+      buttons: [
+        {addClass: 'btn btn-primary', text: 'Ok', onClick: function($noty) {
+            $noty.close();
+			window.location = $(obj).attr('href');
+          }
+        },
+        {addClass: 'btn btn-danger', text: 'Cancel', onClick: function($noty) {
+            $noty.close();
+          }
+        }
+      ]
+    });	
+	return false;
+}

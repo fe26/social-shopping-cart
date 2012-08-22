@@ -24,7 +24,7 @@
 									<p id=p'.$i.' class="teaser-1">'.word_limiter(strip_tags($row['description'],''),10 ).'</p>
 									<br />
 									<a href="'.base_url().'user/category/edit/'.$row['category_id'].'" class="buttonTool b-color-1 edit">Edit</a>
-									<a href="'.base_url().'user/category/delete/'.$row['category_id'].'" class="buttonTool b-color-1">Hapus</a>
+									<a href="'.base_url().'user/category/delete/'.$row['category_id'].'" class="buttonTool b-color-1 delete" onclick="return confirm(this)">Hapus</a>
 								</div>
 							</div>';
 					}
@@ -63,5 +63,14 @@ $(document).ready(function() {
 		});
 		return false;
     }); 
+// $('.delete').click(function(){
+	// var pesan= confirm();
+	// alert(pesan);
+	 // if(pesan== true){
+	 // alert(0);
+		 // return true;
+	 // }
+  // return false;
+// })
 }); 	
 </script>	

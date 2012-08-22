@@ -21,9 +21,7 @@
 <script src="<?php echo base_url()?>assets/users/js/jquery-ui-1.8.23.custom.min.js"></script>
 <!--Notification-->
 <script type="text/javascript" src="<?php echo base_url()?>assets/users/js/noty/jquery.noty.js"></script>
-<script type="text/javascript" src="<?php echo base_url()?>assets/users/js/noty/layouts/top.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>assets/users/js/noty/layouts/center.js"></script>
-<script type="text/javascript" src="<?php echo base_url()?>assets/users/js/noty/layouts/topRight.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>assets/users/js/noty/layouts/bottomRight.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>assets/users/js/noty/themes/default.js"></script>
 <!-- End Notif-->
@@ -146,3 +144,6 @@ unset($_SESSION['notif']);
 
 </body>
 </html>
+<?php 
+//$this->output->enable_profiler(TRUE);
+?>

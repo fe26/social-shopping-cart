@@ -37,4 +37,13 @@ class Category_m extends CI_Model{
 		$result=$this->db->get('category');
 		return $result;
 	}
+	function deletedata($id=""){
+		$this->db->where('uid',$_SESSION['fb_data']['profile']['id']);
+		$this->db->where('category_id',$id);
+		if($this->db->delete('category')){
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
