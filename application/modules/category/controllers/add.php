@@ -9,7 +9,7 @@ class Add extends CI_Controller{
   }
 	function index(){
 		$data['post']=base_url().'user/category/add/post';
-		$this->load->view('categoryadd_view',$data);
+		$this->load->view('form_view',$data);
 	}
 	function post(){
 	  $data = array(		

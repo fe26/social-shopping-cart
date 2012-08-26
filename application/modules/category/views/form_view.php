@@ -25,7 +25,7 @@
 
 											<div class="clear"></div>
 											<div class="btns">   
-											<a data-type="submit" class="button-2" href="#">Submit</a></div>
+											<a data-type="submit" class="button-4" href="#">Submit</a></div>
 										</fieldset>
 									</form>
 								</div>

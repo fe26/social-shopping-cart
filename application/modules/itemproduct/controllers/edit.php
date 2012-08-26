@@ -13,7 +13,7 @@ class Edit extends CI_Controller{
 		if($result->num_rows()>0){
 			$data=$result->row_array();
 			$data['post']=base_url().'user/category/edit/post';
-			$this->load->view('form_view',$data);
+			$this->load->view('categoryadd_view',$data);
 		}else{
 			echo '<div class="block-1">Tidak ada data</center></div>';
 		}

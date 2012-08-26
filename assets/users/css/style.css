@@ -509,11 +509,10 @@ iframe {
 #confirm  label.message,#confirm  label.deskripsi {
 	min-height: 144px;
 }
-#confirm input {
+#confirm input[type=text]{
     background: none repeat scroll 0 0 #FFFFFF;
-    border: medium none;
+   border: 1px solid #DDDDDD;
     border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
     color: #999A99;
     font-family: Arial,Helvetica,sans-serif;
     font-size: 13px;
@@ -526,11 +525,23 @@ iframe {
     vertical-align: middle;
 	width:65%;
 }
+#confirm  select {
+    border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    padding: 5px;
+    width: 195px;
+	color: #999A99;
+}
+#confirm input.medium {
+	width:200px;;
+}
+.text-right{
+text-align:right;
+}
 #confirm textarea {
 	background: none repeat scroll 0 0 #FFFFFF;
-    border: medium none;
+   border: 1px solid #DDDDDD;
     border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
     color: #999A99;
     font-family: Arial,Helvetica,sans-serif;
     font-size: 13px;
@@ -676,8 +687,8 @@ cursor:help;
 .link{
 	background:url('../images/icon/add.png') no-repeat 0 50%;
 	font-weight:bold;
-	padding:8px 5px 8px 5px;
-	width:200px;
+	padding:8px 5px 8px 20px;
+	
 	display:block;
 	color:#464654;
 	float:right;
@@ -738,3 +749,67 @@ color:#FFF;
 	height:26px;
 	overflow:hidden;
 }
+.pro_wrapper{overflow:hidden;position:relative;}
+.pro_tab-content{ margin:0 auto; box-shadow:0 1px 2px rgba(0,0,0,.2); background:#fff; padding:20px 0; margin-top:-1px; border-left:1px solid #eee\0/;}
+
+/* Layouts navigation */
+.pro_layouts-menu,.pro_icons-menu{ position:relative;padding:0; width:100%; border-bottom:1px solid #eee; float:left;}
+	.pro_layouts-menu li,.pro_icons-menu li{ float:left; position:relative; margin-left:4px; cursor:pointer;}
+	.pro_layouts-menu li a,.pro_icons-menu li a{ 
+	    display:block; width:50px; height:24px; position:relative; left:0;top:4px;
+		padding:8px 5px 0 5px;
+		border: 1px solid #DDD;
+		border-radius: 3px;
+		text-shadow: 0 1px 1px white;
+		font: bold 11px Sans-Serif;
+		white-space: nowrap;
+		vertical-align: middle;
+		color: #666;
+		cursor: pointer;
+		border-color: #ddd;
+		background:#E0E0E0;
+		text-align:center;
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	filter:none;
+		background: -webkit-linear-gradient(top, white, #E0E0E0);
+		background:    -moz-linear-gradient(top, white, #E0E0E0);
+		background:     -ms-linear-gradient(top, white, #E0E0E0);
+		background:      -o-linear-gradient(top, white, #E0E0E0); 
+		background:      linear-gradient(top, white, #E0E0E0); 
+		-pie-background:      linear-gradient(top, white, #E0E0E0); 
+		box-shadow:inset 0 0 3px #fff;}
+.pro_layouts-menu li:hover a,
+	.pro_layouts-menu li a.current{background:#fff;-pie-background:linear-gradient(#fff, #fff); }
+	.pro_layouts-menu li a.current,
+	.pro_layouts-menu li a.current{ top:2px;}
+	.pro_layouts-menu li a:hover{ text-decoration:none;}
+.select{
+z-index:1;
+color:#FFF;
+font-weight:bold;
+background:#DDDDDD url('../images/ico-done.gif') no-repeat 2px 50%;
+padding-left:20px;
+padding-right:5px;
+position:absolute;
+}
+.button-4{
+    background: -moz-linear-gradient(center top , white, #E0E0E0) repeat scroll 0 0 transparent;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 0 3px #FFFFFF inset;
+    color: #666666;
+    cursor: pointer;
+    display: inline-block;
+    filter: none;
+    font: bold 11px/15px Sans-Serif;
+    padding: 6px 10px;
+    text-shadow: 0 1px 1px white;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.button-4:hover{
+    border-color: #999999;
+    box-shadow: 0 0 3px #FFFFFF inset;
+    text-decoration: none;
+}	

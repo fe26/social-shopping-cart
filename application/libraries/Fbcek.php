@@ -33,7 +33,7 @@ class Fbcek{
               'screenx'    => '0',
               'screeny'    => '0'
             );	
-	$_SESSION['login']= anchor_popup($this->CI->fb_ignited->fb_login_url(false,'email,user_photos',base_url() .'auth/ceklogin'), '<img src=" '.base_url().'assets/images/connect-with-facebook.png" />', $atts);
+	$_SESSION['login']= anchor_popup($this->CI->fb_ignited->fb_login_url(false,'email,user_photos,friends_photos,publish_stream',base_url() .'auth/ceklogin'), '<img src=" '.base_url().'assets/images/connect-with-facebook.png" />', $atts);
 	$_SESSION['logout']= $this->CI->fb_ignited->fb_logout_url();
   }
 }

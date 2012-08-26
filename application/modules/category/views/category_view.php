@@ -63,14 +63,5 @@ $(document).ready(function() {
 		});
 		return false;
     }); 
-// $('.delete').click(function(){
-	// var pesan= confirm();
-	// alert(pesan);
-	 // if(pesan== true){
-	 // alert(0);
-		 // return true;
-	 // }
-  // return false;
-// })
 }); 	
 </script>	

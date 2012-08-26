@@ -14,7 +14,7 @@
 							<div class="block-5">
 								<div id="confirm">
 									<form id="formregistrasi">
-										<div class="success"> Contact form submitted! We will be in touch soon.</div>
+										<div class="success"> </div>
 										<fieldset>
 											<label class="name">
 												<span class="caption">Nama Toko : </span>

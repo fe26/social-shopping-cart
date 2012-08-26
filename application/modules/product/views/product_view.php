@@ -17,7 +17,7 @@
 						<img alt="" src="<?php echo base_url()?>assets/users/images/icon/product.png">
 						</div>
 						<h2 class="h2-color-2 ident-bot-2">Produk item</h2>
-						<a href="more.html" class="button b-color-2" style="background-color: rgb(241, 241, 241);">Kelola</a>
+						<a href="<?php echo base_url()?>user/itemproduct" class="button b-color-2" style="background-color: rgb(241, 241, 241);">Kelola</a>
 					</div>
 				</div>
 				

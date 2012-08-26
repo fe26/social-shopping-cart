@@ -148,14 +148,14 @@ class Fb_ignited {
 			}
 			$fql_multiquery_url = 'https://graph.facebook.com/'
 					. 'fql?q={' . $fqlmultiquery . '}'
-					. '&' . $this->CI->facebook->getAccessToken();
+					. '&access_token=' . $this->CI->facebook->getAccessToken();
 			$fql_multiquery_result = file_get_contents($fql_multiquery_url);
 			$fql_obj = json_decode($fql_multiquery_result, true);
 		} else {
 			$fqlquery = str_replace(' ', '+', $fqlquery);
 			$fql_query_url = 'https://graph.facebook.com/'
 					. 'fql?q=' . $fqlquery
-					. '&' . $this->CI->facebook->getAccessToken();
+					. '&access_token=' . $this->CI->facebook->getAccessToken();
 			$fql_query_result = file_get_contents($fql_query_url);
 			$fql_obj = json_decode($fql_query_result, true);
 		}
@@ -218,6 +218,7 @@ class Fb_ignited {
 		}
 	}
 
+	
 	function fb_is_bookmarked() {
 		$FQL = array("method" => "fql.query", "query" => "SELECT bookmarked FROM permissions WHERE uid = me()");
 		$datas = $this->CI->facebook->api($FQL);
@@ -456,6 +457,35 @@ class Fb_ignited {
 			}
 		}
 		return $param_array;
+	}
+	
+	function fb_createAlbum(){
+		$album_details = array(
+			'message'=> 'Album numpangjualan.com',
+			'name'=> 'numpangjualan.com'
+		);
+		$create_album = $this->CI->facebook->api('/me/albums', 'post', $album_details);
+		if($create_album){
+			return $create_album;
+		}else{
+			return false;
+		}
+	}
+	
+	function fb_uploadFoto($image,$albumid){
+		$this->CI->facebook->setFileUploadSupport(true);
+		$args = array(  
+			'message' => 'Upload by numpangjualan.com',  
+			'access_token' =>$this->CI->facebook->getAccessToken(),  
+			'image' => $image,
+			'aid' => $albumid
+		); 
+		$upload = $this->CI->facebook->api('/me/photos', 'post', $args);
+		if($upload){
+			return $upload;
+		}else{
+			return false;
+		}
 	}
 
 }

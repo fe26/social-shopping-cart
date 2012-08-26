@@ -75,15 +75,17 @@ $(function(){
 	)
 	
 })
- function getNotif(text,type,modal,layout) {
+ function getNotif(text,type,modal,layout,timeout) {
  //alert,information,error,warning,notification,success
   layout = layout || 'bottomRight';
+  timeout = timeout || false;
  modal = modal || false;
   	var n = noty({
   		text: text,
   		type:  type,
 		layout: layout,
-		 modal: modal,
+		timeout:timeout,
+		modal: modal,
 		dismissQueue: true,
   		theme: 'default'
   	});
