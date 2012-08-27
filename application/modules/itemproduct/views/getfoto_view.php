@@ -7,7 +7,7 @@
 
 
 <div class="pro_tab-content">
-<div class="container_img">
+<div class="container_img" id="container_img">
 <?php 
 	if(isset($data)){
 		if(count($data)>0){
@@ -20,22 +20,25 @@
 						</a>
 					</div>';
 			}
-			echo '<div class="clear"></div>';
-			if(isset($page) and $page !=false){
-				echo '<div class="btns">   
-					<a  class="button-4" rel="'.base_url().'user/itemproduct/getMorePhoto/'.$object_id.'/'.$page.'" href="javascript:void(0)">Load foto lebih banyak lagi</a></div>
-				</div>';				
-			}
-
+			
 		}else{
 			echo '<div class="block-5" style="margin:10px;">Tidak ada satupun foto dalam album ini silahkan upload foto anda</div>';
 		}
 	}else{
-		echo '<div class="block-5" style="margin:10px;">Tidak ada data yang ditampilkan</div>';
+		echo '<div class="block-5" style="margin:10px;">Tidak ada satupun foto dalam album ini silahkan upload foto anda</div>';
 	}
-?>	
 	
+	echo '<div class="clear" id="clear"></div>';
+	if(isset($page) and $page !=false){
+		echo '<div class="btns" style="text-align:center;margin-top:10px" id="btns">
+			<a class="button-4" rel="'.base_url().'user/itemproduct/getMorePhoto/'.$object_id.'/'.$page.'" onclick="getMore()" id="more">Load foto lebih banyak lagi</a></div>
+		</div>';				
+	}
+?>			
 </div>
+<?php
+	
+?>
 </div>
 <div class="pro_tab-content">
 	<div class="block-5" style="margin:10px;">
@@ -99,4 +102,26 @@ $( '#formUpload' ).submit(function (e) {
 	
 });
 })
+
+function getMore(){
+	var loadIng = noty({
+		text: '<h5 style="margin:0;padding:0">Sedang Memuat...</h5>',
+		type:  'alert',
+		layout: 'center',
+		modal: true,
+		dismissQueue: true,
+		theme: 'default'
+	});
+
+	$.ajax({
+        url: $("#more").attr('rel'),
+        type: 'POST',
+        success: function (data) {
+			loadIng.close();
+			$("#btns").remove();
+			$("#clear").remove();
+			$('#container_img').append(data);
+        }
+    });
+}
 </script>

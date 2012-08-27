@@ -78,13 +78,22 @@ class Itemproduct extends CI_Controller{
 		}
 	}
 	function getMorePhoto($object_id="",$page=0){
+		if(!isset($_SERVER["HTTP_X_REQUESTED_WITH"])){
+			redirect();
+			exit;
+		}
 		$this->load->model('itemproduct_m');
 		$data=$this->getDataPhoto($object_id,$page);
-		$this->load->view('getfoto_view',$data);
+		//print_r($data);
+		$this->load->view('morephoto_view',$data);
 	}
 	function getDataPhoto($object_id="",$page=0){
+		if(!isset($_SERVER["HTTP_X_REQUESTED_WITH"])){
+			redirect();
+			exit;
+		}
 		$offset = 10 * $page;
-		$jml_hal=ceil($this->itemproduct_m->countAlbumfb($object_id) / 10);
+		$jml_hal=ceil($this->itemproduct_m->countAlbumfb($object_id) /10);
 		//echo 'JML HAL : '. $jml_hal;
 
 		$sql='select pid,images from photo where album_object_id ='.$object_id .'order by pid desc limit '.$offset.',10';
@@ -95,7 +104,6 @@ class Itemproduct extends CI_Controller{
 			$data['page']=$page+1;
 		}
 		$data['object_id']=$object_id;
-		//$this->load->view('getfoto_view',$data);
 		return $data;
 	}
 	
