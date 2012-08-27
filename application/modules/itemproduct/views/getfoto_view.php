@@ -121,6 +121,7 @@ function getMore(){
 			$("#btns").remove();
 			$("#clear").remove();
 			$('#container_img').append(data);
+			$(".color-box").colorbox({rel:'color-box',width:"75%", height:"85%"});
         }
     });
 }

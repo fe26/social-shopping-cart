@@ -54,7 +54,7 @@
 		</div>
 	</div>	
 </div>
-<div id="divgaley" title="PILIH GAMBAR" style="display:none"></div>
+<div id="divgaley" title="PILIH FOTO" style="display:none"></div>
 <script type="text/javascript">
 $(document).ready(function(){
 	$('#formitemproduct').forms({ownerEmail:'#',mailHandlerURL:'postRegistrasi',redirectUrl:'<?php echo base_url()?>user/itemproduct'});
@@ -73,10 +73,12 @@ $(document).ready(function(){
 			n.close();
 		  $("#divgaley").html(data)
 		  .dialog({
-				height: 400,
+				height: 420,
 				width: 900,
-				modal: true
+				modal: true,
+				dialogClass: 'dialogFixed'
 				});
+				$(".ui-dialog").css('position', 'Fixed');
 		$('#formaddkategori').forms({mailHandlerURL:$("#formaddkategori").attr('action'),redirectUrl:'<?php echo base_url()?>user/category'});
 		$("a.jTip")
 		   .hover(function(){JT_show(this.rev,this.id,this.name)},function(){$('#JT').remove()})
