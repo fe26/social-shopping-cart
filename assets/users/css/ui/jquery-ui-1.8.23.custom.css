@@ -462,3 +462,6 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
     width: 200px; /*must have*/
     height: 200px; /*must have*/
 }
+.dialogFixed {
+    position: fixed !important;
+}
