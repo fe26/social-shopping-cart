@@ -21,7 +21,7 @@ class Itemproduct_m extends CI_Model{
 		}
 	}	
 	function getAllData($perPage="",$uri=""){
-		$this->db->select('product_id,product_name,description');
+		$this->db->select('product_id,product_name,price,photo_thumb,photo_big,description');
 		$this->db->where('uid',$_SESSION['fb_data']['profile']['id']);
 		$this->db->order_by('product_id','DESC');
 		$result=$this->db->get('item_product',$perPage, $uri)->result_array();

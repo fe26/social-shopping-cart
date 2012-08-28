@@ -13,7 +13,7 @@
 		if(count($data)>0){
 			foreach($data as $row){
 				echo '<div class="gridImg">
-					   <a class="select">Pilih</a>
+					   <a class="select" onclick=\'selectPhoto("'.$row['images']['6']['source'].'","'.$row['images']['0']['source'].'")\'>Pilih</a>
 						<a class="color-box"  href="'.$row['images']['0']['source'].'">
 							<div style="background:#FCFCFC url('.$row['images']['6']['source'].') no-repeat;width:150px;height:111px;">
 							</div>
@@ -31,7 +31,9 @@
 	echo '<div class="clear" id="clear"></div>';
 	if(isset($page) and $page !=false){
 		echo '<div class="btns" style="text-align:center;margin-top:10px" id="btns">
-			<a class="button-4" rel="'.base_url().'user/itemproduct/getMorePhoto/'.$object_id.'/'.$page.'" onclick="getMore()" id="more">Load foto lebih banyak lagi</a></div>
+			<a class="button-4" rel="'.base_url().'user/itemproduct/getMorePhoto/'.$object_id.'/'.$page.'" onclick="getMore()" id="more">Load foto lebih banyak lagi</a>
+			<img src="'.base_url().'assets/users/images/loader.gif" id="loader" style="display:none" />
+			</div>
 		</div>';				
 	}
 ?>			
@@ -104,25 +106,23 @@ $( '#formUpload' ).submit(function (e) {
 })
 
 function getMore(){
-	var loadIng = noty({
-		text: '<h5 style="margin:0;padding:0">Sedang Memuat...</h5>',
-		type:  'alert',
-		layout: 'center',
-		modal: true,
-		dismissQueue: true,
-		theme: 'default'
-	});
-
+$("#more").hide();
+$("#loader").show();
 	$.ajax({
         url: $("#more").attr('rel'),
         type: 'POST',
         success: function (data) {
-			loadIng.close();
 			$("#btns").remove();
 			$("#clear").remove();
 			$('#container_img').append(data);
 			$(".color-box").colorbox({rel:'color-box',width:"75%", height:"85%"});
         }
     });
+}
+function selectPhoto(path1,path2){
+	$("#divgaley").dialog("close");
+	$("#formImg").hide().attr("src",path1).fadeIn('slow');
+	$("#photo_thumb").val(path1);
+	$("#photo_big").val(path2);
 }
 </script>

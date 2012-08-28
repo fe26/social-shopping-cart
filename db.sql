@@ -1,6 +1,6 @@
 /*
 SQLyog Enterprise Trial - MySQL GUI v8.12 
-MySQL - 5.1.41 : Database - socialshop
+MySQL - 5.5.16 : Database - socialshop
 *********************************************************************
 */
 
@@ -27,7 +27,7 @@ CREATE TABLE `albums` (
 
 /*Data for the table `albums` */
 
-insert  into `albums`(`uid`,`object_id`,`album_id`) values ('100003367880559','234888296633431','100003367880559_51168'),('1747789089','2364629052306','7506696977560698479'),('1524097236','3540347797084','6545947784546115599');
+insert  into `albums`(`uid`,`object_id`,`album_id`) values ('100003367880559','234888296633431','100003367880559_51168'),('1747789089','2367015671970','7506696977560698540'),('1524097236','3540347797084','6545947784546115599');
 
 /*Table structure for table `category` */
 
@@ -54,13 +54,18 @@ CREATE TABLE `item_product` (
   `product_id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) NOT NULL,
   `product_name` varchar(100) DEFAULT NULL,
-  `photo_url_b` varchar(200) DEFAULT NULL,
+  `photo_thumb` varchar(200) DEFAULT NULL,
+  `photo_big` varchar(200) DEFAULT NULL,
   `price` double DEFAULT NULL,
   `description` varchar(200) DEFAULT NULL,
+  `date_add` datetime DEFAULT NULL,
+  `date_edit` datetime DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 /*Data for the table `item_product` */
+
+insert  into `item_product`(`uid`,`product_id`,`category_id`,`product_name`,`photo_thumb`,`photo_big`,`price`,`description`,`date_add`,`date_edit`) values ('100003367880559',6,13,'Dolor sit amet conse','http://photos-a.ak.fbcdn.net/hphotos-ak-snc7/291898_235556469899947_1898468396_a.jpg','http://a1.sphotos.ak.fbcdn.net/hphotos-ak-snc7/s2048x2048/291898_235556469899947_1898468396_n.jpg',1234567,'Our goods are well-designed and very functional. They have a great number of different useful options. We understand that fashion is very important thing nowadays that is why we stay in touch with the',NULL,NULL);
 
 /*Table structure for table `profile` */
 

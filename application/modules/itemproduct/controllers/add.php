@@ -8,7 +8,7 @@ class Add extends CI_Controller{
 		$this->load->helper('form');
 		$this->load->model('Master_m');
 		$data=$this->Master_m->getAllCategory();
-		$data['post']=base_url().'user/category/add/post';
+		$data['post']=base_url().'user/itemproduct/add/post';
 		$this->template->write('title1','TAMBAH PRODUK ITEM');
 		$this->template->write_view('content','form_view',$data);
 		$this->template->render();
@@ -16,28 +16,32 @@ class Add extends CI_Controller{
 	function post(){
 	  $data = array(		
 		'uid' => $_SESSION['fb_data']['profile']['id'],
-		'category_name' => $this->input->post( "category_name", TRUE ),
-		'description' => $this->input->post( "description", TRUE )
+		'category_id' => $this->input->post( "category_id", TRUE ),		
+		'product_name' => $this->input->post( "product_name", TRUE ),		
+		'photo_thumb' => $this->input->post( "photo_thumb", TRUE ),	
+		'photo_big' => $this->input->post( "photo_big", TRUE ),	
+		'price' => $this->input->post( "price", TRUE ),	
+		'description' => $this->input->post( "description", TRUE ),
 		);
-	  $this->load->model('Category_m');
-	  if($this->Category_m->insertdata($data)){
-		echo 'sukses';
+	  $this->load->model('itemproduct_m');
+	  if($this->itemproduct_m->insertdata($data)){
 		$_SESSION['notif']=array(
 			'msg' => 'Data berhasil disimpan',
 			'type' => 'success',
 			'modal' => 'false',
 			'layout'=>'bottomRight'
 		);
+		redirect('user/itemproduct');
 	  }else{
-		echo 'failed';
 		$_SESSION['notif']=array(
 			'msg' => 'Ada kesalahan data gagal disimpan',
 			'type' => 'error',
 			'modal' => 'false',
 			'layout'=>'bottomRight'
 		);
+		redirect('user/itemproduct/add');
 	  }
-		
+	
 		
 	}
 

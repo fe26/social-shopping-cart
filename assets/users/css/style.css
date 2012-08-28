@@ -270,7 +270,7 @@ transition: all 0.3s ease;}
 .block-5 a:hover img{opacity:0.65}
 
 	.block-5 p {
-		padding:0 15px;
+		padding:0px;
 	}
 .block-6 {
 	padding-left:28px;
@@ -570,10 +570,17 @@ display:block;
 	color:#8ac733;
 	display:none;
 }
-#confirm  .empty, #confirm  .error {
-	font: 12px/20px "Trebuchet MS", sans-serif;
-	display:none;
+#confirm  label.error {
+	font: 12px/20px 'lucida grande',helvetica,verdana,arial,sans-serif;
+    min-height: 0;
+	display:inline;
+	margin-right:15px;
+    position: relative;
+    color: #F3301E;
+    left: 12px;
+	text-align:right;
 }
+
 #confirm .btns {
 	position: absolute;
 	left: 0;
@@ -599,7 +606,7 @@ font-weight: bold;
     font-size: 1.3em;
     font-weight: bold;
     margin-left: 0px;
-    padding: 0px 15px 13px 15px;
+    padding: 0px 12px 0px 12px;
 	display:inline;
     text-decoration: none;
 }

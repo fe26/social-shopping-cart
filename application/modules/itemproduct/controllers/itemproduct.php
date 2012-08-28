@@ -143,6 +143,23 @@ class Itemproduct extends CI_Controller{
 		 }
 		 
 	}
+	
+	function insertdata($data){
+		if($this->db->insert('item_product',$data)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	function updatedata($data,$id){
+		$this->db->where('product_id',$id);
+		$this->db->where('uid',$_SESSION['fb_data']['profile']['id']);
+		if($this->db->update('item_product',$data)){
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
 
 /* End of file welcome.php */
