@@ -5,6 +5,7 @@
 				<div class="success" style="display: none;"> 
 				</div>
 				<fieldset>
+				<input type="hidden" name="product_id" id="product_id" value="<?php if(isset($product_id)) echo $product_id ?>" />
 					<label class="selection">
 						<span class="caption">Kategori Produk : 
 						<span class="formInfo">
@@ -26,7 +27,7 @@
 							<a rev="diisi dengan angka jangan memnggunakan karakter titik (.) atau koma (,)  [ Contoh : 100000 ]" class="jTip" id="3" name="Field Harga Item Produk"> &nbsp;</a>
 						</span>
 					</span>
-						<input type="text" value="" class="medium text-right required number" name="price">
+						<input type="text" value="<?php if(isset($price)) echo $price ?>" class="medium text-right required number" name="price">
 					</label>
 					<label class="deskripsi">
 					<span class="caption">Deskripsi Produk : 
@@ -34,15 +35,15 @@
 							<a name="Field Deskripsi" id="4" class="jTip" rev="Isi deskripsi produk anda dengan jelas"> &nbsp;</a>
 						</span>					
 					</span>
-						<textarea name="description"></textarea>
+						<textarea name="description"><?php if(isset($description)) echo $description ?></textarea>
 					</label>
 
 				<div class="grid_6 col-1">
 					<div class="block-1">
 						<div class="ident-bot-1 img-block">
-						<img alt="" id="formImg" src="https://fbcdn-photos-a.akamaihd.net/hphotos-ak-ash4/402103_1855622287455_641698878_a.jpg">
-						<input type="hidden" name="photo_thumb" id="photo_thumb" />
-						<input type="hidden" id="photo_big" name="photo_big"/>
+						<img alt="" id="formImg" src="<?php if(isset($photo_thumb)) echo $photo_thumb ?>">
+						<input type="hidden" name="photo_thumb" id="photo_thumb" value="<?php if(isset($photo_thumb)) echo $photo_thumb ?>" />
+						<input type="hidden" id="photo_big" name="photo_big" value="<?php if(isset($photo_big)) echo $photo_big ?>" />
 						</div>
 						<a  id="kelola" href="<?php echo base_url()?>user/itemproduct/getphoto"  onclick="javascript:void(0)" class="button b-color-2" style="background-color: rgb(241, 241, 241);">Pilih Foto</a>
 						

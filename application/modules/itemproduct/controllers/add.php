@@ -7,7 +7,7 @@ class Add extends CI_Controller{
 	function index(){
 		$this->load->helper('form');
 		$this->load->model('Master_m');
-		$data=$this->Master_m->getAllCategory();
+		$data['categoryOpt']=$this->Master_m->getAllCategory();		
 		$data['post']=base_url().'user/itemproduct/add/post';
 		$this->template->write('title1','TAMBAH PRODUK ITEM');
 		$this->template->write_view('content','form_view',$data);
@@ -29,7 +29,8 @@ class Add extends CI_Controller{
 			'msg' => 'Data berhasil disimpan',
 			'type' => 'success',
 			'modal' => 'false',
-			'layout'=>'bottomRight'
+			'layout'=>'bottomRight',
+			'timeout'=>'5000'
 		);
 		redirect('user/itemproduct');
 	  }else{
@@ -37,7 +38,8 @@ class Add extends CI_Controller{
 			'msg' => 'Ada kesalahan data gagal disimpan',
 			'type' => 'error',
 			'modal' => 'false',
-			'layout'=>'bottomRight'
+			'layout'=>'bottomRight',
+			'timeout'=>''
 		);
 		redirect('user/itemproduct/add');
 	  }

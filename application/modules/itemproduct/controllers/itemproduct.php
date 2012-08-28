@@ -7,7 +7,7 @@ class Itemproduct extends CI_Controller{
 	function index(){
 		$this->load->model('itemproduct_m');
 		$this->load->library('pagination');
-		$config['base_url'] = base_url().'user/category/index/';
+		$config['base_url'] = base_url().'user/itemproduct/index/';
 		$config['uri_segment'] = 4;
 		$config['total_rows'] = $this->itemproduct_m->getRow();
 		$config['per_page'] = '8'; 
@@ -27,17 +27,19 @@ class Itemproduct extends CI_Controller{
 			'msg' => 'Data berhasil dihapus',
 			'type' => 'success',
 			'modal' => 'false',
-			'layout'=>'bottomRight'
+			'layout'=>'bottomRight',
+			'timeout'=>'5000'
 		);
 	  }else{
 		$_SESSION['notif']=array(
 			'msg' => 'Ada kesalahan data gagal dihapus',
 			'type' => 'error',
 			'modal' => 'false',
-			'layout'=>'bottomRight'
+			'layout'=>'bottomRight',
+			'timeout'=>''
 		);
 	  }
-	  redirect('user/category');
+	  redirect('user/itemproduct');
 	}
 	function getphoto(){
 		if(!isset($_SERVER["HTTP_X_REQUESTED_WITH"])){

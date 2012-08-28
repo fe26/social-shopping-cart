@@ -24,7 +24,8 @@ class Add extends CI_Controller{
 			'msg' => 'Data berhasil disimpan',
 			'type' => 'success',
 			'modal' => 'false',
-			'layout'=>'bottomRight'
+			'layout'=>'bottomRight',
+			'timeout'=>'5000'
 		);
 	  }else{
 		echo 'failed';
@@ -32,7 +33,8 @@ class Add extends CI_Controller{
 			'msg' => 'Ada kesalahan data gagal disimpan',
 			'type' => 'error',
 			'modal' => 'false',
-			'layout'=>'bottomRight'
+			'layout'=>'bottomRight',
+			'timeout'=>''
 		);
 	  }
 		

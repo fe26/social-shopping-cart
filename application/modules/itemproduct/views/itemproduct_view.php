@@ -28,8 +28,8 @@
 									<h2 class="h2-color-1 ident-bot-2 title-1">'.word_limiter(strip_tags($row['product_name'],''),2).'</h2>
 									<p id=p'.$i.' class="teaser-1">'.word_limiter(strip_tags($row['description'],''),10 ).'</p>
 									<br />
-									<a href="'.base_url().'user/category/edit/'.$row['product_id'].'" class="buttonTool b-color-1 edit">Edit</a>
-									<a href="'.base_url().'user/category/delete/'.$row['product_id'].'" class="buttonTool b-color-1 delete" onclick="return confirm(this)">Hapus</a>
+									<a href="'.base_url().'user/itemproduct/edit/'.$row['product_id'].'" class="buttonTool b-color-1 edit">Edit</a>
+									<a href="'.base_url().'user/itemproduct/delete/'.$row['product_id'].'" class="buttonTool b-color-1 delete" onclick="return confirm(this)">Hapus</a>
 								</div>
 							</div>';
 					}
@@ -49,7 +49,7 @@
 </div>
 <script type="text/javascript">
 $(document).ready(function() {
-alert($(".block-1").width())
+//alert($(".block-1").width())
 // //alert($('.title-1').height());
     // $('#add,.edit').click(function(){
 		// $.ajax({

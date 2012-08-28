@@ -27,14 +27,16 @@ class Category extends CI_Controller{
 			'msg' => 'Data berhasil dihapus',
 			'type' => 'success',
 			'modal' => 'false',
-			'layout'=>'bottomRight'
+			'layout'=>'bottomRight',
+			'timeout'=>'5000'
 		);
 	  }else{
 		$_SESSION['notif']=array(
 			'msg' => 'Ada kesalahan data gagal dihapus',
 			'type' => 'error',
 			'modal' => 'false',
-			'layout'=>'bottomRight'
+			'layout'=>'bottomRight',
+			'timeout'=>''
 		);
 	  }
 	  redirect('user/category');

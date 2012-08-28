@@ -53,7 +53,8 @@ $(document).ready(function() {
 		  .dialog({
 				height: 300,
 				width: 750,
-				modal: true
+				modal: true,
+				dialogClass: 'dialogFixed'
 				});
 		$('#formaddkategori').forms({mailHandlerURL:$("#formaddkategori").attr('action'),redirectUrl:'<?php echo base_url()?>user/category'});
 		$("a.jTip")

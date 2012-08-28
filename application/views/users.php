@@ -133,7 +133,7 @@
 	if(isset($_SESSION['notif'])){
 ?>
   $(document).ready(function() {
-		getNotif('<?php echo $_SESSION['notif']['msg'] ?>','<?php echo $_SESSION['notif']['type'] ?>',<?php echo $_SESSION['notif']['modal'] ?>,'<?php echo $_SESSION['notif']['layout'] ?>');
+		getNotif('<?php echo $_SESSION['notif']['msg'] ?>','<?php echo $_SESSION['notif']['type'] ?>',<?php echo $_SESSION['notif']['modal'] ?>,'<?php echo $_SESSION['notif']['layout'] ?>','<?php echo $_SESSION['notif']['timeout'] ?>');
   });
 <?php	
 unset($_SESSION['notif']);

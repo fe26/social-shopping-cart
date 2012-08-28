@@ -9,12 +9,12 @@ class Master_m extends CI_Model{
 		$this->db->where('uid',$_SESSION['fb_data']['profile']['id']);
 		$result=$this->db->get('category');
 		
-		$opt['categoryOpt'][''] ='Pilih Kategori Produk' ;
+		$categoryOpt[''] ='Pilih Kategori Produk' ;
 		if($result->num_rows()>0){
 			foreach($result->result_array() as $row){
-				$opt['categoryOpt'][$row['category_id']]=$row['category_name'] ;
+				$categoryOpt[$row['category_id']]=$row['category_name'] ;
 			}
 		}
-		return $opt;
+		return $categoryOpt;
 	}
 }

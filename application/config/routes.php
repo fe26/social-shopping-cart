@@ -16,11 +16,15 @@ $route['user/category/delete/(:num)'] = "category/delete/$1";
 //itemproduct
 $route['user/itemproduct'] = "itemproduct";
 $route['user/itemproduct/index'] = "itemproduct/index";
+$route['user/itemproduct/index/(:num)'] = "itemproduct/index/$1";
 $route['user/itemproduct/add'] = "itemproduct/add";
+$route['user/itemproduct/edit/(:num)'] = "itemproduct/edit/index/$1";
 $route['user/itemproduct/add/post'] = "itemproduct/add/post";
+$route['user/itemproduct/edit/post'] = "itemproduct/edit/post";
 $route['user/itemproduct/getphoto'] = "itemproduct/getphoto";
 $route['user/itemproduct/getPost'] = "itemproduct/getPost";
 $route['user/itemproduct/getMorePhoto/(:any)/(:num)'] = "itemproduct/getMorePhoto/$1/$2";
+$route['user/itemproduct/delete/(:num)'] = "itemproduct/delete/$1";
 
 
 

@@ -33,13 +33,13 @@ class Itemproduct_m extends CI_Model{
 	}
 	function getData($id){
 		$this->db->where('uid',$_SESSION['fb_data']['profile']['id']);
-		$this->db->where('item_product_id',$id);
+		$this->db->where('product_id',$id);
 		$result=$this->db->get('item_product');
 		return $result;
 	}
 	function deletedata($id=""){
 		$this->db->where('uid',$_SESSION['fb_data']['profile']['id']);
-		$this->db->where('item_product_id',$id);
+		$this->db->where('product_id',$id);
 		if($this->db->delete('item_product')){
 			return true;
 		}else{

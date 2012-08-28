@@ -1,6 +1,6 @@
 /*
 SQLyog Enterprise Trial - MySQL GUI v8.12 
-MySQL - 5.5.16 : Database - socialshop
+MySQL - 5.1.41 : Database - socialshop
 *********************************************************************
 */
 
@@ -39,11 +39,11 @@ CREATE TABLE `category` (
   `category_name` varchar(100) DEFAULT NULL,
   `description` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`category_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 /*Data for the table `category` */
 
-insert  into `category`(`uid`,`category_id`,`category_name`,`description`) values ('100003367880559',13,'Kategory 1','Deskripsi 1'),('1747789089',9,'Kategori 1','Deskripsi1'),('1747789089',10,'Kategori 2','Deskripsi 2'),('1747789089',11,'Kategori 3','Kategori 3'),('1747789089',12,'Kategori 4','Kategori 4');
+insert  into `category`(`uid`,`category_id`,`category_name`,`description`) values ('1747789089',9,'Kategori 1','Deskripsi1'),('1747789089',10,'Kategori 2','Deskripsi 2'),('1747789089',11,'Kategori 3','Kategori 3'),('1747789089',12,'Kategori 4','Kategori 4'),('100003367880559',14,'Kategory 2','We are living in the epoch of great technical progress and we are sure that new technologies are our future. You know that computers are being applied in all spheres of society. It is a tremendous ach');
 
 /*Table structure for table `item_product` */
 
@@ -61,11 +61,11 @@ CREATE TABLE `item_product` (
   `date_add` datetime DEFAULT NULL,
   `date_edit` datetime DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 /*Data for the table `item_product` */
 
-insert  into `item_product`(`uid`,`product_id`,`category_id`,`product_name`,`photo_thumb`,`photo_big`,`price`,`description`,`date_add`,`date_edit`) values ('100003367880559',6,13,'Dolor sit amet conse','http://photos-a.ak.fbcdn.net/hphotos-ak-snc7/291898_235556469899947_1898468396_a.jpg','http://a1.sphotos.ak.fbcdn.net/hphotos-ak-snc7/s2048x2048/291898_235556469899947_1898468396_n.jpg',1234567,'Our goods are well-designed and very functional. They have a great number of different useful options. We understand that fashion is very important thing nowadays that is why we stay in touch with the',NULL,NULL);
+insert  into `item_product`(`uid`,`product_id`,`category_id`,`product_name`,`photo_thumb`,`photo_big`,`price`,`description`,`date_add`,`date_edit`) values ('100003367880559',6,13,'Dolor sit amet conse','http://photos-a.ak.fbcdn.net/hphotos-ak-snc7/291898_235556469899947_1898468396_a.jpg','http://a1.sphotos.ak.fbcdn.net/hphotos-ak-snc7/s2048x2048/291898_235556469899947_1898468396_n.jpg',1234567,'Our goods are well-designed and very functional. They have a great number of different useful options. We understand that fashion is very important thing nowadays that is why we stay in touch with the',NULL,NULL),('100003367880559',7,13,'Dolor sit amet conse','http://photos-h.ak.fbcdn.net/hphotos-ak-snc7/579959_235557609899833_1379234648_a.jpg','http://a8.sphotos.ak.fbcdn.net/hphotos-ak-snc7/s2048x2048/579959_235557609899833_1379234648_n.jpg',20000,'Our goods are well-designed and very functional. They have a great number of different useful options. We understand that fashion is very important thing nowadays that is why we stay in touch with the',NULL,NULL),('100003367880559',8,13,'Dolor sit amet conse','http://photos-h.ak.fbcdn.net/hphotos-ak-snc7/579959_235557609899833_1379234648_a.jpg','http://a8.sphotos.ak.fbcdn.net/hphotos-ak-snc7/s2048x2048/579959_235557609899833_1379234648_n.jpg',30000,'Our goods are well-designed and very functional. They have a great number of different useful options. We understand that fashion is very important thing nowadays that is why we stay in touch with the',NULL,NULL),('100003367880559',9,13,'Mac Pro','http://photos-h.ak.fbcdn.net/hphotos-ak-snc7/424250_235613693227558_252671027_a.jpg','http://a8.sphotos.ak.fbcdn.net/hphotos-ak-snc7/s2048x2048/424250_235613693227558_252671027_n.jpg',9999999,'So, it is natural that this sphere is one of the most popular ones and it is really hard to offer computer hardware because of great number of competitors. We are providing a great choice of different',NULL,NULL),('100003367880559',10,13,'Imac','http://photos-g.ak.fbcdn.net/hphotos-ak-snc7/292040_235614289894165_635402260_a.jpg','http://a7.sphotos.ak.fbcdn.net/hphotos-ak-snc7/s2048x2048/292040_235614289894165_635402260_n.jpg',390000,'We are living in the epoch of great technical progress and we are sure that new technologies are our future. You know that computers are being applied in all spheres of society. It is a tremendous ach',NULL,NULL),('100003367880559',11,14,'Dolor sit amet conse','http://photos-c.ak.fbcdn.net/hphotos-ak-ash3/558659_235557389899855_1135472993_a.jpg','http://a3.sphotos.ak.fbcdn.net/hphotos-ak-ash3/s2048x2048/558659_235557389899855_1135472993_n.jpg',2000,'We are living in the epoch of great technical progress and we are sure that new technologies are our future. You know that computers are being applied in all spheres of society. It is a tremendous ach',NULL,NULL),('100003367880559',12,14,'Dolor sit amet conse','http://photos-h.ak.fbcdn.net/hphotos-ak-snc7/424250_235613693227558_252671027_a.jpg','http://a8.sphotos.ak.fbcdn.net/hphotos-ak-snc7/s2048x2048/424250_235613693227558_252671027_n.jpg',9999,'We are living in the epoch of great technical progress and we are sure that new technologies are our future. You know that computers are being applied in all spheres of society. It is a tremendous ach',NULL,NULL),('100003367880559',13,13,'Dolor sit amet conse','http://photos-g.ak.fbcdn.net/hphotos-ak-snc7/292040_235614289894165_635402260_a.jpg','http://a7.sphotos.ak.fbcdn.net/hphotos-ak-snc7/s2048x2048/292040_235614289894165_635402260_n.jpg',99999,'We are living in the epoch of great technical progress and we are sure that new technologies are our future. You know that computers are being applied in all spheres of society. It is a tremendous ach',NULL,NULL),('100003367880559',14,13,'Dolor sit amet conse','http://photos-e.ak.fbcdn.net/hphotos-ak-snc7/404041_234907636631497_1138750218_a.jpg','http://a5.sphotos.ak.fbcdn.net/hphotos-ak-snc7/s2048x2048/404041_234907636631497_1138750218_n.jpg',99999,'We are living in the epoch of great technical progress and we are sure that new technologies are our future. You know that computers are being applied in all spheres of society. It is a tremendous ach',NULL,NULL),('100003367880559',15,14,'Dolor sit amet conse','http://photos-d.ak.fbcdn.net/hphotos-ak-snc7/304696_235616903227237_733453457_a.jpg','http://a4.sphotos.ak.fbcdn.net/hphotos-ak-snc7/s2048x2048/304696_235616903227237_733453457_n.jpg',20000,'We are living in the epoch of great technical progress and we are sure that new technologies are our future. You know that computers are being applied in all spheres of society. It is a tremendous ach',NULL,NULL);
 
 /*Table structure for table `profile` */
 
