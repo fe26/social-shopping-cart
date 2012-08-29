@@ -41,12 +41,11 @@
 				<div class="grid_6 col-1">
 					<div class="block-1">
 						<div class="ident-bot-1 img-block">
-						<img alt="" id="formImg" src="<?php if(isset($photo_thumb)) echo $photo_thumb ?>">
+						<img class="lazy" alt="" id="formImg" src="<?php echo base_url()?>assets/users/images/noimage.jpg" data-original="<?php if(isset($photo_thumb)) echo $photo_thumb ?>">
 						<input type="hidden" name="photo_thumb" id="photo_thumb" value="<?php if(isset($photo_thumb)) echo $photo_thumb ?>" />
 						<input type="hidden" id="photo_big" name="photo_big" value="<?php if(isset($photo_big)) echo $photo_big ?>" />
 						</div>
 						<a  id="kelola" href="<?php echo base_url()?>user/itemproduct/getphoto"  onclick="javascript:void(0)" class="button b-color-2" style="background-color: rgb(241, 241, 241);">Pilih Foto</a>
-						
 					</div>
 				</div>
 					<div class="clear"></div>

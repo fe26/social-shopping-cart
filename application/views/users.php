@@ -27,6 +27,11 @@
 <!-- End Notif-->
 <script src="<?php echo base_url()?>assets/users/js/forms.js"></script>	
 <script src="<?php echo base_url()?>assets/users/js/script.js"></script>
+<script src="<?php echo base_url()?>assets/users/js/jquery.lazyload.min.js"></script>
+
+<link rel="stylesheet" href="<?php echo base_url()?>assets/users/css/colorbox.css">
+<script src="<?php echo base_url()?>assets/users/js/jquery.colorbox-min.js"></script>
+
 <!--[if lt IE 8]>
       <div style=' clear: both; text-align:center; position: relative;'>
         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -139,7 +144,11 @@
 unset($_SESSION['notif']);
 	}
 ?>
-	
+$(document).ready(function() {
+	$("img.lazy").lazyload({ 
+		effect : "fadeIn"
+	});
+});
 </script>	
 
 </body>

@@ -60,9 +60,6 @@
 	</div>
 </div>
 <script src="<?php echo base_url()?>assets/users/js/jquery.tools.min.js"></script>
-<script src="<?php echo base_url()?>assets/users/js/jquery.colorbox-min.js"></script>
-<link rel="stylesheet" href="<?php echo base_url()?>assets/users/css/colorbox.css">
-
 <script type="text/javascript">
 $(document).ready(function(){
 	$(".pro_layouts-menu").tabs(".pro_tab-content");
@@ -121,7 +118,7 @@ $("#loader").show();
 }
 function selectPhoto(path1,path2){
 	$("#divgaley").dialog("close");
-	$("#formImg").hide().attr("src",path1).fadeIn('slow');
+	$("#formImg").hide().attr("data-original",path1).attr("src",path1).fadeIn('slow');	
 	$("#photo_thumb").val(path1);
 	$("#photo_big").val(path2);
 }

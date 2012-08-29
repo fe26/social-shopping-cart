@@ -820,3 +820,8 @@ position:absolute;
     box-shadow: 0 0 3px #FFFFFF inset;
     text-decoration: none;
 }	
+.price{
+margin-bottom:0;
+margin-top:5px;
+color:#0095D6;
+}
