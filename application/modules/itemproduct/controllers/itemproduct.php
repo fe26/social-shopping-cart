@@ -95,12 +95,13 @@ class Itemproduct extends CI_Controller{
 			exit;
 		}
 		$offset = 10 * $page;
-		$jml_hal=ceil($this->itemproduct_m->countAlbumfb($object_id) /10);
+		$count=$this->itemproduct_m->countAlbumfb($object_id);
+		$jml_hal=ceil($count/10);
 		//echo 'JML HAL : '. $jml_hal;
 
 		$sql='select pid,images from photo where album_object_id ='.$object_id .'order by pid desc limit '.$offset.',10';
 		$data=$this->fb_ignited->fb_fql($sql, false);
-		if($jml_hal==$page+1){
+		if($jml_hal==$page+1 or $jml_hal==0){
 			$data['page']=false;
 		}else{
 			$data['page']=$page+1;
