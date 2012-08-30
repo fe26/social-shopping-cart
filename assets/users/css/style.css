@@ -23,7 +23,7 @@ a {
 }
 
 /*  Header styles */
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h6 {
 	line-height:1.2em;
 	color:#464646;margin-bottom:16px
 }
@@ -32,7 +32,7 @@ h2 {font:400 21px 'Signika', sans-serif;}
 h2 a:hover {color:#8ac733;}
 h3{font-size:18px}
 h4{font-size:16px}
-h5{font-size:14px}
+h5{font-size:14px;color:#464646;margin:5px;margin-top:10px;}
 h6{font-size:12px}
 strong {
 	font:14px/17px Arial, sans-serif;
@@ -59,7 +59,7 @@ strong {
 	width:100%;
 	overflow:hidden;
 	position:relative;
-	padding-top:58px;
+	padding-top:80px;
 }
 .extra-wrap {
 	overflow:hidden;
@@ -754,6 +754,10 @@ color:#FFF;
 }
 .title-1{
 	height:26px;
+	overflow:hidden;
+}
+.title-2{
+	height:20px;
 	overflow:hidden;
 }
 .pro_wrapper{overflow:hidden;position:relative;}

@@ -82,7 +82,7 @@
 		</div>
 		<div class="container_24">
 			<div class="wrapper">
-				<h1 class="desktop"><a href="index.html">&nbsp;</a></h1>
+				
 					<div class="slogan-ident">
 						<div class="slogan">
 							<?php 

@@ -27,9 +27,9 @@
 									<div class="gridImg2" style="background:#FFF url('.$row['photo_thumb'].') no-repeat 50% 50%;" >
 									</div>
 									</a>
-									<h2 class="h2-color-1 ident-bot-2 title-1">'.word_limiter(strip_tags($row['product_name'],''),2).'</h2>
+									<h5 class="h2-color-1 ident-bot-2 title-2">'.word_limiter(strip_tags($row['product_name'],''),3).'</h5>
 									<p id=p'.$i.' class="teaser-1">'.word_limiter(strip_tags($row['description'],''),10 ).'</p>
-									<h4 class="price">'.$row['price'].'</h4>
+									<h4 class="price">'.number_format($row['price'],0, ',', '.').'</h4>
 									<br />
 									<a href="'.base_url().'user/itemproduct/edit/'.$row['product_id'].'" class="buttonTool b-color-1 edit">Edit</a>
 									<a href="'.base_url().'user/itemproduct/delete/'.$row['product_id'].'" class="buttonTool b-color-1 delete" onclick="return confirm(this)">Hapus</a>
@@ -52,6 +52,6 @@
 </div>
 <script type="text/javascript">
 $(document).ready(function(){
-	$(".color-box").colorbox({rel:'color-box'});
+	$(".color-box").colorbox({rel:'color-box',width:"75%",height:"95%"});
 }); 	
 </script>	

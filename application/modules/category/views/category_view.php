@@ -44,7 +44,6 @@
 </div>
 <script type="text/javascript">
 $(document).ready(function() {
-//alert($('.title-1').height());
     $('#add,.edit').click(function(){
 		$.ajax({
 		  url: $(this).attr('href'),
