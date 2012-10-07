@@ -19,8 +19,10 @@ class Fbcek{
 					'picture'=>$picture
 				);
 			$_SESSION['fb_data']=$fb_data;
+			$this->cekProfile($profile['id']);
 		}else{
 			unset($_SESSION['fb_data']);
+			unset($_SESSION['profil_data']);
 		}
 	}
 	
@@ -33,7 +35,20 @@ class Fbcek{
               'screenx'    => '0',
               'screeny'    => '0'
             );	
-	$_SESSION['login']= anchor_popup($this->CI->fb_ignited->fb_login_url(false,'email,user_photos,friends_photos,publish_stream',base_url() .'auth/ceklogin'), '<img src=" '.base_url().'assets/images/connect-with-facebook.png" />', $atts);
+	$_SESSION['login']= anchor_popup($this->CI->fb_ignited->fb_login_url(false,'email,user_photos,friends_photos,publish_stream',true,base_url() .'auth/ceklogin'), '<img src=" '.base_url().'assets/images/connect-with-facebook.png" />', $atts);
+	$_SESSION['loginurl']=$this->CI->fb_ignited->fb_login_url(false,'email,user_photos,friends_photos,publish_stream',false,base_url() .'auth/cekloginMember');
 	$_SESSION['logout']= $this->CI->fb_ignited->fb_logout_url();
+  }
+  function cekProfile($uid=Null){
+	$this->CI->load->database();
+	$this->CI->db->where('id',$uid);
+	$result=$this->CI->db->get('profile');
+	if($result->num_rows()>0){
+		$_SESSION['profil_data']=$result->row_array();
+		return true;
+	}else{
+		unset($_SESSION['profil_data']);
+		return false;
+	}
   }
 }

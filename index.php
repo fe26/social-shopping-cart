@@ -1,4 +1,5 @@
 <?php
+//ini_set('session.cookie_domain', 'numpangjualan.com' );
 	define('ENVIRONMENT', 'development');
 /*
  *---------------------------------------------------------------

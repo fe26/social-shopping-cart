@@ -6,15 +6,6 @@ $template['default']['regions'] = array(
    'content',
    'footer',
 );
-
-$template['user']['template'] = 'users';
-$template['user']['regions'] = array(
-   'header',
-   'content',
-   'title1',
-   'title2',
-   'footer',
-);
 $template['default']['parser'] = 'parser';
 $template['default']['parser_method'] = 'parse';
 $template['default']['parse_template'] = FALSE;

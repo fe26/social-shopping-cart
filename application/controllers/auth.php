@@ -9,7 +9,7 @@ class Auth extends CI_Controller {
 	function ceklogin(){
 		if(isset($_SESSION['fb_data'])){
 			echo "<script>
-					window.opener.location.reload(true);
+					window.opener.location.href='".base_url()."member';
 					self.close();
 				</script>
 				";
@@ -22,6 +22,11 @@ class Auth extends CI_Controller {
 			}
 		}
     }
+	function cekloginMember(){
+		if(isset($_SESSION['fb_data'])){
+			redirect(base_url().'member');
+		}
+	}
 	
 	function logout(){
 		session_destroy();

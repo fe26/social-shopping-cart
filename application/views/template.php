@@ -69,13 +69,13 @@
                     <article class="grid_8">
                         <nav>
                             <ul class="menu">
-                                <li><a class="active" href="index.html">Home<span></span></a></li>
-                                <li><a href="index-1.html">About<span></span></a>
+                                <li><a class="active" href="#">Home<span></span></a></li>
+                                <li><a href="#">About<span></span></a>
                                 </li>
-                                <li><a href="index-2.html">Services<span></span></a></li>
-                                <li><a href="index-3.html">projects<span></span></a></li>
-                                <li><a href="index-4.html">blog<span></span></a></li>
-                                <li><a href="index-5.html">contacts<span></span></a></li>
+                                <li><a href="#">Services<span></span></a></li>
+                                <li><a href="#">projects<span></span></a></li>
+                                <li><a href="#">blog<span></span></a></li>
+                                <li><a href="#">contacts<span></span></a></li>
                             </ul>
                         </nav>
                         <div class="clear"></div>
@@ -113,7 +113,7 @@
     </div>
 </header>
 <!-- Content -->
-<section>
+<!--section>
 	<div class="container_12 margin-bot">
     	<div class="">
         	<article class="grid_12">
@@ -146,13 +146,13 @@
         </div>
     </div>
    
-</section>
+</section-->
 <!-- Footer -->
 <footer>
 	<div class="container_12">
     	<div class="wrapper">
         	<article class="grid_12">
-            	<div>Tobasco &copy; 2012  <a href="index-6.html">Privacy Policy</a></div>
+            	<div>numpangjualan.com &copy; 2012  <a href="#">Privacy Policy</a></div>
                 <div><!--{%FOOTER_LINK} --></div>
             </article>
         </div>
@@ -160,7 +160,4 @@
 </footer>
 </body>
 </html>
-<?php 
-$this->output->enable_profiler(TRUE);
-?>
 
